@@ -1,0 +1,42 @@
+\chapter{人类移动性}
+
+移动性其实分为很多种，人类移动性、商品的移动性、信息的移动性都被研究了很多。Physics Reports 有一篇综述，\href{https://www.sciencedirect.com/science/article/pii/S037015731830022X}{Human mobility: Models and applications}
+
+\section{经典模型}
+
+王铮老师有一本书大家可以看一下，叫《理论经济地理学》里面有大量的地理学模型。虽然不算新，也没有什么实证分析，不过想法很值得借鉴。
+
+\subsection{重力模型}
+
+重力模型可能是地理学中最有名的模型了。形式如下：\begin{equation}
+T_{i j}=\frac{m_{i}^{\alpha} n_{j}^{\beta}}{f\left(r_{i j}\right)}
+\end{equation}
+
+重力模型对火车运货量\href{https://www.jstor.org/stable/2087063?origin=crossref}{Zipf, G. K. The P 1P 2/D hypothesis: On the intercity movement of persons. Am. Sociol. Rev. 11, 677–686 (1946).}、地铁乘客\href{https://journals.aps.org/pre/abstract/10.1103/PhysRevE.86.026102}{Goh, S., Lee, K., Park, J. S. and Choi, M. Y. Modification of the gravity model and application to the metropolitan Seoul subway system. Phys. Rev. E 86, 026102 (2012).}、韩国高速公路\href{https://iopscience.iop.org/article/10.1209/0295-5075/81/48005}{Jung, W. S., Wang, F. and Stanley, H. E. Gravity model in the Korean highway. EPL 81, 48005 (2008).}、航空网络\href{https://doi.org/10.1016/j.jairtraman.2007.02.001}{Grosche, T., Rothlauf, F. and Heinzl, A. Gravity models for airline passenger volume estimation. J. Air Transp. Manag. 13, 175–183 (2007).}、通勤\href{https://science.sciencemag.org/content/312/5772/447}{Viboud, C. et al. Synchrony, waves, and spatial hierarchies in the spread of influenza. Science 312, 447–451 (2006).}和人口迁移\href{https://www.tandfonline.com/doi/abs/10.2747/0272-3638.16.4.327}{Tobler, W. Migration: Ravenstein, thornthwaite, and beyond. Urban Geogr. 16, 327–343 (1995).}等问题的拟合很不错。
+
+通过目的地选择来推导重力模型是一个学术套路，我觉得还能玩二十年。目前目的地选择的理论有这样一些根源：确定性效用理论\href{https://doi.org/10.1111/j.1467-9787.1969.tb01340.x}{Niedercorn, J. H. and Bechdolt, B. V. Jr. An economic derivation of the "gravity law” of spatial interaction. J. Regional Sci. 9, 273–282 (1969).}、随机效用理论\href{https://www.jstor.org/stable/134305?origin=crossref}{Domencich, T. A. and  Mcfadden, D. Urban travel demand: A behavioral analysis. (North-Holland, Amsterdam, 1975).}、博弈论\href{https://www.nature.com/articles/s41598-019-46026-w}{Yan, X. Y. and Zhou, T. Destination choice game: A spatial interaction theory on human mobility. Sci. Rep. 9, 1–9 (2019).}等。文章最近也还有，不过都是集中在SR之类的期刊上。
+
+\begin{quote}
+    一个规律如果基本是客观存在且不很精确的话，不同的发现方法总是能发出文章的。毕竟人类对于规律的探索就像对孤独的回避。
+\end{quote}
+  
+\subsection{辐射模型/介入机会（IO）模型}
+
+辐射模型记载在Simini和Marta等人一篇名声不大好的Nature论文里，\href{https://www.nature.com/articles/nature10856}{A universal model for mobility and migration patterns. Nature 484, 96–100 (2012).}
+
+文章中的配图甚是有意思，图一小人的表情是有出处的。法国大作家雨果写毕名著《巴黎圣母院》，与出版商有了这番史上最短通信：
+\begin{center}
+    “？—雨果”\\
+    “！—出版商”
+\end{center}
+
+辐射模型刻画了：
+
+辐射模型的表述如下：\begin{equation}
+\left\langle T_{i j}\right\rangle=T_{i} \frac{m_{i} n_{j}}{\left(m_{i}+s_{i j}\right)\left(m_{i}+n_{j}+s_{i j}\right)}
+\end{equation}其中，$T_{ij}$表示$i$到$j$的流量，$m_i$,$n_j$代表两个位置的人口，$r_{ij}$为两地距离，$s_{ij}$代表以$i$为中心，$r_{ij}$为半径的圆内的人口总数。
+
+严小勇同志又搞了一篇Scientific Reports，\href{https://doi.org/10.1038/s41598-020-61613-y}{Liu, E., Yan, X. A universal opportunity model for human mobility. Sci Rep 10, 4657 (2020). } 介入机会（intervening opportunity）\footnote{\href{https://www.baidu.com/link?url=x-lW8LLAwVj0UCSvfYwmmsvSsLs4MiNoFonbejPvLVbktEM5xeFK2-0nwgOvZprl&wd=&eqid=b1f1d8ba0007275e000000035e8c3a1e}{Stouffer, S. A. Intervening opportunities: A theory relating mobility and distance. Am. Sociol. Rev. 5, 845–867 (1940).}}模型说的是：个体选择目的地与两个因素相关，终点的机会与起点终点之间介入的机会（？）。此类模型可以给出特定时空尺度上的准确预测，但是不同尺度上都合适的IO模型在上面这篇文章是第一次给出的。本文考虑的是人类行为的两个倾向：探索倾向和谨慎倾向。模型的形式是\begin{equation}
+    {Q}_{ij}={\int }_{0}^{\infty }{\Pr }_{{m}_{i}+\alpha \cdot {s}_{ij}}(z){\Pr }_{\beta \cdot {s}_{ij}}( < z){\Pr }_{{m}_{j}}( > z)dz,
+\end{equation}
+

@@ -1,0 +1,62 @@
+\chapter{空间流行病学}
+
+代表作家：Grenfell、Durrett（\href{https://services.math.duke.edu/~rtd/Talks/Talks.html}{近期演讲主页}，\href{https://services.math.duke.edu/~rtd/survey/survhome.html}{Stochastic Spatial Models: A Hyper-Tutorial}）
+
+\begin{quote}
+    You won't stop it until you fully understand it. It won't just \textit{magically} disappear.
+\end{quote}
+
+
+
+\section{时空传播规律}
+重要文献：Travelling waves and spatial hierarchies in measles epidemics, Bryan Grenfell et. al., Nature 2001
+
+\paragraph{流行病传播的实际问题与理论模型的区别} |实际问题|: 要注意流行病的具体传播规律。不光是参数的设定，更是大类模型的选择。要关注非线性、时空异质性、非马氏性等重要因素。
+
+\subsection{孤立人口中流行病传播的幂律分布}
+
+\href{https://www.nature.com/articles/381600a0}{Power laws governing epidemics in isolated populations, C. J. Rhodes and R. M. Anderson}
+
+在生物时间序列中非线性和混沌模式的识别和分析的背景下，发达国家\textbf{大型城市}社区中麻疹病毒感染的时空变化一直是许多讨论的焦点。 相反，由于感染记录的频繁消失且高度不规则，孤立的小岛屿人群用传统分析并不能提供有用的见解。本文使用流行病大小和持续时间分布的方式来证明这种系统动力学的\textbf{规律性}（regularities）是明显的。 具体而言，这些生物学系统的特征是定义明确的幂律分布，其方式类似于物理学中其他非线性的，空间中展开的动态系统。本文进一步表明，所观察到的幂律指数已通过基于网格的简单模型很好地描述，该模型反映了各个宿主之间的社会交互。
+
+人口学上来讲，小岛上的现象通常可以不考虑与外界的交互，从而是一个良好的社区化语境。法罗群岛（知乎链接：\href{https://zhuanlan.zhihu.com/p/26426579}{法罗群岛的绞肉机}，讲得是这个地方的大家去捕鲸的故事）是丹麦的海外自治领地。地理位置介乎挪威海和北大西洋中间，处于挪威到冰岛之间距离一半的位置。
+
+法罗群岛的人口总数为25,000。外部人口与之交互会带来流行病麻疹。我们认为输入病例是非常精确的，因为法罗群岛面积小而交互局部化，也因为每个病例在这里都会引起很大重视。在58年中，有43个互不相同的epidemic event（\textbf{定义}为连续的$t = \tau_{\text{end}}-\tau_{\text{start}}$个月都出现有限个病例记录，这段时间的前后月份都不出现麻疹病例）。每个event的规模（size）定义为病例数的求和：$s = \sum_{\tau_{\text{start}}}^{\tau_{\text{end}}} C(\tau)$.地震学里面有个\href{https://www.nature.com/articles/nature04094}{Gutenberg-Richer定律}，说的是地震频率与烈度之间关系的幂律分布，长得就跟法罗群岛流行病的发病情况差不多，都是$\log N(>s) = a-b\log s$。流行病的频数和持续时间的幂律关系在本文找到了：\begin{align}
+    &N(s) \propto s^{-1-b}, &b\simeq 0.28\\
+    &N(t) \propto s^{-1-c}, &c\simeq 0.8
+\end{align}这两个关系对我们估计短期内流行病规模和持续时间的概率分布是十分有用的。小而短的麻疹疫情比大而长的麻疹疫情要更频繁出现。这种幂律关系的好处是它对子样本数据同样成立，可以用前一半数据来预测后一半数据。作者利用博恩霍尔姆岛和雷克雅未克的精确麻疹病例来估计来幂律指数$b$和$c$。连同法罗群岛，这三个地方的幂律指数是高度吻合的。
+
+这种幂律现象为什么会出现还不能很好的被理解。有一些作者没有提到的空间模型做得还不错。于是作者使用了一个基于格点的模型，该模型之前被用为\textit{林火传播}的模型，用在这个空间\textit{S-I}的场景也合适（相关文献：\href{https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.69.1629}{phys. rev. lett. 自组织临界的林火模型}、\href{https://journals.aps.org/pre/abstract/10.1103/PhysRevE.55.2174}{phys. rev. e 林火模型中的相变}、\href{https://journals.aps.org/pre/abstract/10.1103/PhysRevE.50.1009}{phys. rev. e 林火模型的标度律和模拟结果} 这几个是同一个团队的作品）。\textbf{模型叙述如下}：periodic的离散的$L\times L$格点图上，每个点有三种可能的状态：被感染、易感、空点，随着离散的时间更新。更新规则是：
+
+\begin{enumerate}
+    \item 如果易感者S的最近邻居有患者，就可能被感染；
+    \item 患者I失去活性，所处位置清空；
+    \item 易感者以概率为$\mu$移动到空格子上；
+    \item 新患者I不时以概率$\gamma$被感染。
+\end{enumerate}
+
+模型有效反映了代表罕见外来病例作用的迁移项。模拟用$L = 250$, $\mu = 2.6\times 10^{-5}$, $\nu = \mu/300$, 得到了$b\simeq 0.29$, $c\simeq 1.5$的结果。模型对十个月以上的长期流行病的数量是低估的。网络模型的占用情况可以模拟真实社区。平均人口密度是$25,000$，这意味着每$4$个位置有一个人。均衡状态下，平均寿命如果是$70$岁，我们期望每天有$\sim 1$个新生儿降生。真实的$\nu/\mu$应该是$1/400$，而不是模拟使用的$1/300$. 新生的易感人群和患病的人的迁移由均值为$1$和$1/300$泊松过程刻画，这样一个step相当于一天。模拟结果受长期误差影响非常大，但是对5个月以内的流行病的分布有着很好的复现。
+
+作者还使用了随机SEIR模型进行对比。此时人口被假设为均匀同质混合，外来人口比例很低。同样计算了时间和规模的分布。这个模型高估了大流行病的频率，而且与真实分布吻合不好。SEIR模型很可能不适合小人口的不频繁的流行病。
+
+我们的结果表明，在孤立的海岛麻疹数据集中存在流行病的规模和持续时间的标度律。这将这些流行病的动力学与其他空间扩展的非线性动力学系统归为同一类，在该非线性动力学系统中也观察到标度律。实际上，这促进了一种预测方法，可以计算给定大小和持续时间的流行病的发生频率。
+
+一个简单的空间模型所产生的指数几乎与我们的数据分析所见的相同。幂律现象也可能与高度接种疫苗的社区和发展中国家偏远农村人口中麻疹不经常爆发的研究有关。这里讨论的方法是完全通用的，可以应用于少数人群中任何其他时间序列的传染病暴发。
+    
+\href{https://science.sciencemag.org/content/sci/312/5772/447.full.pdf}{Synchrony, Waves, and Spatial Hierarchies in the Spread of Influenza}
+
+量化流行病的长程传播是疾病动力学和疾病控制的主要因素。本文使用美国超过30年（1972-2002）流感周期数据来分析两次爆发之间变化规律。流感高发季度的传播能力更快更强。
+
+
+
+\section{大空间尺度的地理学问题}
+
+\href{https://www.nature.com/articles/414716a.pdf}{麻疹传播的波状结构和空间层次}时空行波是捕食者-猎物和宿主-寄生虫动力学的显着表现。然而，很少有系统的文献足以检测重复的波并解释它们与人口结构和人口统计学的时空变化的相互作用。在这里，我们用详尽的时空数据集证明了英格兰和威尔士的流行性流行行波。我们使用小波相位分析，可以实现动态非平稳性-解释这些以及其他许多生态时间序列中的时空模式很复杂。在疫苗接种之前的时期，明显的分层感染浪潮从大城市向小城镇转移。麻疹疫苗的引入限制，但并没有消除这种等级传染病。一个机理上的随机模型为从大的“核心”城市到较小的“卫星”城镇通过传染性“火花”传播的海浪提供了动力学解释。因此，宿主种群结构的空间层次是这些感染浪潮的先决条件。
+
+旅行波来自于激活-抑制动力学研究，并被很多的host-natural enemy 系统所预测。但是除了入侵动力学，经验观测被研究的还是比较少。
+
+\subsection{麻疹行波的强迫林火模型}
+
+
+
+\subsection{from individuals to epidemics}

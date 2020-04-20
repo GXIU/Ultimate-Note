@@ -1,0 +1,75 @@
+\documentclass[letterpaper]{book}
+
+\usepackage[fontset=fandol]{ctex}
+\usepackage{titlesec}
+% 每节换新页
+\newcommand{\sectionbreak}{\newpage}
+\usepackage[utf8]{inputenc}
+\usepackage[singlelinecheck=false]{caption}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+\usepackage{xeCJK}
+\usepackage{color}
+\usepackage[colorlinks,
+linkcolor=magenta,
+anchorcolor=red,
+citecolor=blue]{hyperref}
+\usepackage{url}
+\usepackage{listings}
+\usepackage{shortvrb}
+\usepackage{stfloats}
+\usepackage{bigstrut}
+\usepackage{wallpaper} %使用wallpaper宏包
+\CenterWallPaper{}{img/paper}
+\usepackage[inner=3cm,outer=1.5cm]{geometry}
+\MakeShortVerb{|}
+
+\title{终极笔记 \\ Research Note}
+\author{修格致}
+\date{2020年4月6日-\today}
+
+\begin{document}
+
+\frontmatter
+
+\maketitle
+
+\tableofcontents
+
+\mainmatter
+
+\chapter{序言}
+
+\paragraph{序章：} 本书是我从博二下半年开始的文献笔记和idea拾遗。会十分不连贯，不过也不乏精彩的部分。这已经是我第二年的下半年了。而我仍然觉得觉得距离第一年并没有过去多久，一切还是开始时的样子。希望回头看看时，已经做成了自己想做的工作！
+
+
+\section{关于}
+\textcolor[rgb]{0,0,1}{更新于2020年4月6日。}
+
+现在我的研究兴趣集中在城市生态系统、城市韧性、以及相关的数学物理模型上。本文的主要内容也将是涉及这些内容。这个过程大概将持续到2021年的7月，作为我心目中博士阶段的三块基石中的第一块。
+
+\subsection{空间流行病学}
+2020年是个地狱开局。大卫·斯特恩和科比布莱恩特去世了。紧接着COVID走入并改变了我们每个人的生活。这个时候我们没有人可以置身事外。我也想做一些有意义的相关研究。我不希望我这些研究仅仅是涉及本次疫情的特定情况。更重要的是我们如何在每次流行病发生的时候应对得好一点，再好一点。
+
+\subsubsection{流行病传播的时空特征}
+工具：
+\begin{itemize}
+    \item 小波分析
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{CONTENTS/SpatialEpidemics}
+\input{CONTENTS/NetworkResilience}
+\input{CONTENTS/EvolvingNetworks}
+\input{CONTENTS/HumanMobility}
+\input{CONTENTS/DOL}
+\input{CONTENTS/Physics}
+
+\end{document}
+
+
+\section{\LaTeX{}的爱与恨}
+
+今天是2020年4月17日。我终于扔掉了dndbook的模版，重新用book模版做了一个模版，并且选用了信纸作为底图。警告数从94变成了3. 请大家勤奋改模版，像我学习。
