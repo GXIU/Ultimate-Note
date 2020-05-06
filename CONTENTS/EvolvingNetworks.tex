@@ -6,7 +6,7 @@
 \href{https://www.sciencedirect.com/science/article/pii/S002251931930459X}{防范意识对随机网络上的疾病传播的影响}。文章中说流行病\textit{期间}产生的防范意识不会对basic reproduction number产生影响。从其他人群中产生的防范意识会降低$R_0$. 防范意识可以显著减小流行病的规模，切断与病人的连边比降低感染率的效果要明显得多。流行病规模不会随着防范意识和感染率单调减小。局部和全局的防范意识是否对流行病规模产生影响取决于网络的类型和感染率。
 
 \subsection{偏好与地理对流行病传播的影响}
-\href{https://journals.aps.org/pre/abstract/10.1103/PhysRevE.76.056109}{偏好与地理对流行病传播的影响}：随机网络上的SIS模型，每个时刻，空间网络增加一个有$m$条边的结点。它与度为$k_j$，距离为$d_{ij}$的结点$j$连接的概率正比于$k^A_j/d^B_{ij}$, $A$和$B$都是正常数。如果$A=0$, 就是有临界值的普通疾病传播，疾病最终会消失；$B=0$时，(a) $A=1$时没有临界行为，其他时候仍然有临界行为。如果两个因素同时存在，临界值之上的$A$和临界值之下的$B$控制的网络对于传染是有鲁棒性的。
+\href{https://journals.aps.org/pre/abstract/10.1103/PhysRevE.76.056109}{偏好与地理对流行病传播的影响}：随机网络上的SIS模型，每个时刻，空间网络增加一个有$m$条边的结点。它与度为$k_{j}$，距离为$d_{ij}$的结点$j$连接的概率正比于$k^{A}_{j}/d^{B}_{ij}$, $A$和$B$都是正常数。如果$A=0$, 就是有临界值的普通疾病传播，疾病最终会消失；$B=0$时，(a) $A=1$时没有临界行为，其他时候仍然有临界行为。如果两个因素同时存在，临界值之上的~$A$和临界值之下的~$B$控制的网络对于传染是有鲁棒性的。
 
 \subsection{Epidemic thresholds in dynamic contact networks}
 \href{https://royalsocietypublishing.org/doi/pdf/10.1098/rsif.2008.0218}{Epidemic thresholds in dynamic contact networks}再生率$R_0$是流行病学中的基本量，它决定了易感群体中传染病的一阶增长。在大多数流行病的\textbf{理论模型}中，都有一个特定的值$R_0$，即流行病阈值，高于该值可能会大流行，但低于此值就不会发生大流行。随着流行病模型的复杂性增加，计算流行病阈值的难度也增加。本文通过简单的动态随机网络类推导了SIR流行病的$R_0$和流行阈值。与大多数流行病学模型一样，$R_0$取决于两个基本流行病参数，即传播率和恢复率。我们发现，$R_0$还取决于社会参数，即描述并发联系人数量异质性的\textbf{度分布}以及给出联系人启动和终止速率的混合参数。我们表明，社会融合从根本上改变了流行病学格局，因此，用静态网络来近似动态网络可能是不足够的。
@@ -19,13 +19,13 @@
 
 \href{https://www.pnas.org/content/pnas/107/10/4491.full.pdf}{Some features of the spread of epidemics and information on a random graph}. 
 
-\paragraph{三种随机图}\textbf{小世界}图是Watts和Strogatz引入的。在一维圆环$\mathbf{Z} ~\text{mod}~n$上，连接所有距离小于等于$m$的点。然后以概率$p$，将边的一端连到纯随机的另一个结点上。\textbf{BA模型}依次加入结点，连接$m$条边到已有结点上，概率正比于该结点的度。该模型的度分布收敛于\begin{equation} p_{k}=\frac{2 m(m+1)}{k(k+1)(k+2)} \quad \text { for } k \geq m \end{equation}如果不是正比于度，而是一个平移项$k+a$ ($a>-1$), 那么度分布将会是$p_k\sim C k^{-3+a}$. 如果$a\geq 0$, 这种方式等价于：新边以概率为$a/(a+1)$随机选一个结点，以概率为$1/(a+1)$使用偏好依附机制。\textbf{NSW模型}，给定度分布$\{p_k,k\geq 0\}$, 独立采样出真实的度序列$\{d_k\}_{k=1,\dots, n}$, 假设采样出的度的和为偶数，然后结点依次随机连$d_i$条边，构建一个$n$个结点的随机图$G_n$. 
+\paragraph{三种随机图}\textbf{小世界}图是Watts和Strogatz引入的。在一维圆环$\mathbf{Z} ~\text{mod}~n$上，连接所有距离小于等于$m$的点。然后以概率$p$，将边的一端连到纯随机的另一个结点上。\textbf{BA模型}依次加入结点，连接$m$条边到已有结点上，概率正比于该结点的度。该模型的度分布收敛于\begin{equation} p_{k}=\frac{2 m(m+1)}{k(k+1)(k+2)} \quad \text { for } k \geq m \end{equation}如果不是正比于度，而是一个平移项$k+a$ ($a>-1$), 那么度分布将会是$p_k\sim C k^{-3+a}$. 如果$a\geq 0$, 这种方式等价于：新边以概率为$a/(a+1)$随机选一个结点，以概率为$1/(a+1)$使用偏好依附机制。\textbf{NSW模型}，给定度分布$\{p_k,k\geq 0\}$, 独立采样出真实的度序列$\{d_k\}_{k=1,\dots, n}$, 假设采样出的度的和为偶数，然后结点依次随机连$d_i$条边，构建一个$n$个结点的随机图$G_{n}$. 
 
 \paragraph{两种流行病}\textbf{SIR}类似于分枝过程，以速率为$\lambda$感染，以速率为$1$恢复，恢复之后不易感。该模型与渗流模型有很好的对应。如果$x$, $y$在图里是邻居，就以概率为$\lambda/(\lambda+1)$, 也就是二者之一患病期间感染另一人的概率，连边。流行病的规模就是含有初始被感染结点的连通图的大小。\textbf{SIS}模型要更复杂一些。感染和恢复速率分别是$\lambda$和$1$. 这又称为\textit{接触过程}。
 
 \textbf{小世界网络}的简单版本$m=1$在Watts和Strogatz的小世界十年前就被Bollobas和Chung提出了。这种小世界的半径是$\sim\log_2 n$. 称为BC小世界。我们希望每个个体有且只有一个长程联系，这样就可以定一个相关的大世界图$\mathscr{B}_m$. 
 
-自由积是个不错的形式。$\mathbf{Z}*\{0,1\}$. 其中的元素的形式是$z_01z_11\dots 1z_k$. 也就是移动$z_0$连到$1$, 然后到$z_1$再到$1$以此类推。这个文章太难了我以后再看吧。不过真的好精彩。
+自由积是个不错的形式。$\mathbf{Z}*\{0,1\}$. 其中的元素的形式是$z_01z_11\dots 1z_k$. 也就是移动$z_0$连到$1$, 然后到$z_{1}$再到$1$以此类推。这个文章太难了我以后再看吧。不过真的好精彩。
 
 \href{https://journals.aps.org/pre/pdf/10.1103/PhysRevE.82.036112}{演化网络上的疾病传播}
 
@@ -56,8 +56,7 @@
 \begin{figure}
     \centering
     \includegraphics[width = 0.5\linewidth]{Pics/rewire-structure-of-adaptive-networks.png}
-    \caption{适定性网络的结构。上边一行是平均最近邻度$\langle k_{nn} \rangle$, 下面一行是度分布。从左到右分别是无差别重连/没有SIS关系的/适定性网络。参数设置是$w = 0.3$, $r = 0.002$, $p = 0.008$, $N = 10^5$, $K = 10^6$.}
-    \label{fig:rewire-structure}
+    \caption{适定性网络的结构。上边一行是平均最近邻度$\langle k_{nn} \rangle$, 下面一行是度分布。从左到右分别是无差别重连/没有SIS关系的/适定性网络。参数设置是$w = 0.3$, $r = 0.002$, $p = 0.008$, $N = 10^5$, $K = 10^6$.}\label{fig:rewire-structure}
 \end{figure}
 
 最后，同时考虑适定性重连与流行病动力。虽然重连没有快到可以完全分离 S 与 I，但是还是能形成两个比较松散连接的组团，比如说 $l_{SI} \approx 0.01\langle k \rangle$. 组团间联系在被切断，有的 I 结点也在康复，有的 S 结点也在被感染。这导致结点度随时间的巨大变化。只要一个结点是 S，它的度几乎就以线性增长，\begin{equation}
@@ -70,8 +69,7 @@
 \begin{figure}
     \centering
     \includegraphics[width = 0.5\linewidth]{Pics/Degree_correlation_index.png}
-    \caption{上图是$r_\text{corr}$作为$w$的函数，下图是度分布的均值和方差作为$w$的函数。空心是 S，实心是 I. 都相对于没重连的情况标准化了。参数是$N=10^5$, $K = 10^6$, $r = 0.002$, $p = 0.008$.}
-    \label{fig:parameters_vs_rewire}
+    \caption{上图是$r_\text{corr}$作为$w$的函数，下图是度分布的均值和方差作为$w$的函数。空心是 S，实心是 I. 都相对于没重连的情况标准化了。参数是$N=10^5$, $K = 10^6$, $r = 0.002$, $p = 0.008$.}\label{fig:parameters_vs_rewire}
 \end{figure}
 
 图~\ref{fig:parameters_vs_rewire}~进一步量化了自适应重新布线对新兴网络结构的影响。随着$w$的增加，相关度迅速增加。此外，易感者的平均程度增加而感染程度则略有下降。甚至更明显是在易感的度分布的方差的增加。比如$w=0.6$时的方差$\sigma^2$大了100倍。这表明形成了牢固连接的中心和临时孤立的节点，这些节点由重连而迅速重新连接。
