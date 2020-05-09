@@ -7,3 +7,149 @@
 指标定义我们从一些已有的文献开始看。比如介数中心度的这篇~\cite{Barthelemy2018BC}
 
 \section{进化动力学}
+
+\section{Growth models}
+
+生长模型是处理这类问题的一个重要出发点。下面是之前的一个文献笔记。
+
+\subsection{Protocol：spatial-constrained attachment}
+\begin{enumerate}
+\item
+  给定一个有界\(d\)维欧式空间\(S=|x_1|,\cdots,|x_d|\le\frac{L}{2}.\)
+  \(t=0\)时在原点插入一个结点.
+\item
+  结点生成：每个\(t\)时刻，以均匀分布在\(S\)中放置一个新结点\(P_t\).
+  记它的坐标为\(x_t.\) 如果存在一个结点\(P_q,q\in\{1,2,\cdots,t-1\}\),
+  使得\(||x_p-x_q||< r\), 则结点\(P_t\)存活。否则\(P_t\)死亡。
+\item
+  连边：将新加入结点与其\(r-\)临域的所有结点相连。
+\item
+  重复这个过程，直到存活的结点达到\(N\)个。
+\end{enumerate}
+
+这个几何网络会加速增长。因为新加入的结点可生存的区域的测度（为所有存活结点的\(r-\)临域的开覆盖）会越来越大。
+
+\subsection{解析}
+\begin{itemize}
+\item
+  所需要的极限：\textbf{热力学极限}：\(L,t\rightarrow\infty.\)
+
+  在这种情况下，网络会渐近形成一个\(d\)维球。
+\item
+  半径\(R(t)\)（定义为\(\max\{||P_0-P_i||,i=1,2,\cdots t\}\)）
+
+  \begin{itemize}
+  \item
+    有\(R(t)\sim t.\)
+  \item
+    证明：以1维正半轴为例，新结点\(P(t+1)\)落在\([0,R(t)+r)\)可以生存，落在\([R(t)-r,R(t)+r]\)可以使得\(R(t+1)> R(t).\)
+    于是增加半径的量的期望为(在\(R(t)\)远大于\(r\)的前提下)
+
+    \begin{align}
+    &\int_0^Ldx\ P(x_{t+1}=x)\Delta R_{x,t}\\
+    =& \frac{2r}{L/2}\int_{R(t)-r}^{R(t)+r} dx\ \frac{1}{2r} (x+r-R(t))\\
+    =& \frac{2}{L} \{(2r\cdot [r-R(t)]) +\frac{1}{2}[(R(t)+r)^2-(R(t-r))^2] \}\\
+    =& \frac{2}{L} 2r^2\\
+    =&r^2/L\\\
+    \equiv& C 
+    \end{align}
+
+    所以网络的半径\(R(t)\)匀速增长。所以\(R(t)\sim t. \)
+    \(\text{q.e.d.}\)
+
+    对于多维情形，在每个维度上的半径\(R_1,\cdots,R_d\)的增长速率都相同，所以它们的线性组合的增长速率相同。即向任何一个方向的增长速率相同。证毕。
+  \end{itemize}
+\item
+  距中心距离为\(\rho\)时，密度\(\mu(\rho,\Theta ,t)\sim \frac{R(t)-\rho}{L^d},\)
+  \(\mu(\rho,t) \sim \frac{(R(t)-\rho)\rho^{d-1}}{L^d}. \)
+  到中心距离在\(\rho\)以内的结点个数\(\sim \rho^d.\)
+\item
+  网络中结点的总数
+
+  \begin{align}
+  N(t)&=\int_0^{R(t)}\mu(\rho,t)d\rho\\
+  &\sim R(t)^{d-1}\\
+  &\sim t^{d-1}
+  \end{align}
+\item
+  总边数：
+
+  \begin{itemize}
+  \item
+    边数\(v(\rho,\Theta,t)\sim u(\rho,\Theta,t)^2\)（局部每两个边都相连）
+  \item
+    总边数
+  \end{itemize}
+
+  \begin{align}
+  E(t) &=\int v(\rho,\Theta,t)d\sigma\\
+  &\sim \int t^2\cdot t^{d-1} dt\\
+  & =t^{d+1}.
+  \end{align}
+
+  \begin{itemize}
+  \item
+    所以我们有\(E(t)\sim N(t)^{\frac{d+2}{d+1}}.\)
+  \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+\item
+  标度率
+
+  \begin{enumerate}
+  \item
+    边数与结点数 \(\gamma=\frac{d+2}{d+1}. \)
+
+    \begin{itemize}
+    \item
+      证明：总边数：
+
+      边数\(v(\rho,\Theta,t)\sim u(\rho,\Theta,t)^2\)（局部每两个边都相连）
+
+      总边数
+    \end{itemize}
+
+    \begin{align}
+    E(t) &=\int v(\rho,\Theta,t)d\sigma\\
+    &\sim \int t^2\cdot t^{d-1} dt(\text{极坐标变换})\\
+    & =t^{d+1}.
+    \end{align}
+
+    所以我们有\(E(t)\sim N(t)^{\frac{d+2}{d+1}}\).
+  \item
+    体积与结点数\(\gamma=\frac{d}{d+1}.\)（这个就不证明了，跟上面差不多）这是一个亚线性的现象（Heap's
+    law）。
+  \item
+    加速增长效应 \(t\sim N(t)^{\frac{1}{d+1}}\).
+
+    \[s.t\ \ \frac{dN(t)}{dt}\sim N{(t)}^{\frac{d}{d+1}}\\
+    \text{左边: }N(t)\sim t^{d+1}\\
+    dN(t)\sim t^{d}dt\\
+    and\ t^d\sim N{(t)}^{\frac{d}{d+1}}\\
+    so\ that\frac{dN(t)}{dt}\sim N(t)^{\frac{d}{d+1}}.\]
+  \end{enumerate}
+\end{itemize}
+
+\subsection{跟真实结果不符合？增加一个参数}
+
+一个新加入的结点的生存概率是插入点的点密度的一个负指数倍：\(P(\text{survive})=\mu(\rho,\Theta,t)^{-\alpha}\).
+
+与之前的推导类似，在某位置\(d\sigma\)附近的结点个数为（从开始有结点开始，对时间积分）
+
+\[\mu(\rho,\Theta,t)d\sigma = \int_{\tau_\rho}^t \mu(\rho,\Theta,s)^{-\alpha} \frac{d\sigma}{L^d}ds\]
+
+我们可以得到一个PDE：$\begin{cases}
+\frac{\partial u}{\partial t} =\frac{1}{L^d}\mu^{-\alpha}\\
+\mu(\rho,\Theta,\tau_\rho)=0. (\text{初值条件})
+\end{cases}$
+
+它的解是\[\mu(\rho,\Theta,t)\sim{(t-\tau_\rho)}^{1/(1+\alpha)}\]
+\begin{itemize}
+\item
+  边：\(R(t)\sim N(t)^{1+\frac{1}{1+(1+\alpha)d}}\)
+\item
+  体积\(V(t)\sim N(t)^{1+\frac{1+\alpha}{1+(1+\alpha)d}}\)
+\end{itemize}
+\(\alpha\rightarrow\infty\)时，上述两个幂律指数都会趋近于\(1\).
+也就是随着\(\alpha\)的增加，超/亚线性性会降低至线性。
