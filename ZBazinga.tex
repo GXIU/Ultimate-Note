@@ -1,13 +1,14 @@
-\documentclass[letterpaper,twocolumn]{book}
+\documentclass[letterpaper,twocolumn,10pt]{book}
 
 \usepackage[fontset=fandol]{ctex}
 \usepackage{titlesec}
 % 每节换新页
-\newcommand{\sectionbreak}{\newpage}
+% \newcommand{\sectionbreak}{\newpage}
 \usepackage[utf8]{inputenc}
 \usepackage[singlelinecheck=false]{caption}
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage[sectionbib]{chapterbib} % 分章节参考文献
 \usepackage{graphicx}
 \usepackage{mathrsfs}
 \usepackage{xeCJK}
@@ -21,12 +22,12 @@ citecolor=blue]{hyperref}
 \usepackage{shortvrb}
 \usepackage{stfloats}
 \usepackage{bigstrut}
-\usepackage{wallpaper} %使用wallpaper宏包
-\CenterWallPaper{}{img/paper}
-\usepackage[inner=3cm,outer=1.5cm]{geometry}
+% \usepackage{wallpaper} %使用wallpaper宏包
+% \CenterWallPaper{}{img/paper}
+\usepackage[inner=1.5cm,outer=1cm]{geometry}
 \MakeShortVerb{|}
 
-\title{终极笔记 \\ Research Note}
+\title{\Huge{\textbf{终\ 极\ 笔\ 记}} \\ \vspace{0.5cm} \huge{Research Note}}
 \author{修格致}
 \date{2020年4月6日-\today}
 
@@ -73,6 +74,7 @@ citecolor=blue]{hyperref}
 \input{CONTENTS/Involution}
 \input{CONTENTS/Population_Dynamics}
 \input{CONTENTS/IDEA}
+\input{CONTENTS/Writing}
 
 \bibliographystyle{unsrt}
 \bibliography{ref.bib}
