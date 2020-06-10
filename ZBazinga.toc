@@ -1,0 +1,59 @@
+\contentsline {chapter}{\numberline {1}序言}{1}{chapter.1}%
+\contentsline {paragraph}{序章：}{1}{paragraph*.2}%
+\contentsline {section}{\numberline {1.1}关于}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}空间流行病学}{1}{subsection.1.1.1}%
+\contentsline {subsubsection}{流行病传播的时空特征}{2}{subsubsection*.3}%
+\contentsline {chapter}{\numberline {2}空间流行病学}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}时空传播规律}{3}{section.2.1}%
+\contentsline {paragraph}{流行病传播的实际问题与理论模型的区别}{3}{paragraph*.4}%
+\contentsline {subsection}{\numberline {2.1.1}孤立人口中流行病传播的幂律分布}{3}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}跨尺度人口动力学得共生吸引子：伦敦的麻诊病例}{5}{subsection.2.1.2}%
+\contentsline {paragraph}{数据}{5}{paragraph*.5}%
+\contentsline {paragraph}{理论模型}{5}{paragraph*.6}%
+\contentsline {paragraph}{推断框架}{5}{paragraph*.7}%
+\contentsline {subsubsection}{隐含理论背景}{5}{subsubsection*.8}%
+\contentsline {section}{\numberline {2.2}大空间尺度的地理学问题}{5}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}麻疹行波的强迫林火模型}{6}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}from individuals to epidemics}{6}{subsection.2.2.2}%
+\contentsline {chapter}{\numberline {3}网络弹性}{7}{chapter.3}%
+\contentsline {chapter}{\numberline {4}演化网络}{9}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Essentials}{9}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}防范意识对随机网络上的疾病传播的影响}{9}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}偏好与地理对流行病传播的影响}{9}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Epidemic thresholds in dynamic contact networks}{9}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}随机图上疾病和信息的传播}{10}{section.4.2}%
+\contentsline {paragraph}{三种随机图}{10}{paragraph*.9}%
+\contentsline {paragraph}{两种流行病}{10}{paragraph*.10}%
+\contentsline {subsection}{\numberline {4.2.1}适定性网络上的流行病动态}{10}{subsection.4.2.1}%
+\contentsline {paragraph}{流行条件}{11}{paragraph*.11}%
+\contentsline {paragraph}{重连与状态独立}{11}{paragraph*.12}%
+\contentsline {paragraph}{上面的重连规则}{11}{paragraph*.13}%
+\contentsline {paragraph}{进一步的性质}{12}{paragraph*.15}%
+\contentsline {section}{\numberline {4.3}本章Ideas}{13}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}戴口罩的演化博弈}{13}{subsection.4.3.1}%
+\contentsline {chapter}{\numberline {5}人类移动性}{17}{chapter.5}%
+\contentsline {section}{\numberline {5.1}经典模型}{17}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}重力模型}{17}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}辐射模型/介入机会（IO）模型}{18}{subsection.5.1.2}%
+\contentsline {chapter}{\numberline {6}分工的形成}{19}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Fitness}{19}{section.6.1}%
+\contentsline {chapter}{\numberline {7}物理模型}{21}{chapter.7}%
+\contentsline {section}{\numberline {7.1}通过几何重正化对真实网络进行多尺度展开}{21}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}真实网络中几何标度存在的证据}{22}{subsection.7.1.1}%
+\contentsline {section}{\numberline {7.2}空间网络的标度律}{23}{section.7.2}%
+\contentsline {chapter}{\numberline {8}内卷化}{25}{chapter.8}%
+\contentsline {section}{\numberline {8.1}介数中心性}{25}{section.8.1}%
+\contentsline {section}{\numberline {8.2}进化动力学}{25}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Growth models}{25}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Protocol：spatial-constrained attachment}{25}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}解析}{26}{subsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.3.3}跟真实结果不符合？增加一个参数}{27}{subsection.8.3.3}%
+\contentsline {chapter}{\numberline {9}人口动力学}{29}{chapter.9}%
+\contentsline {paragraph}{Evolution Arrests Invasions of Cooperative Populations}{29}{paragraph*.19}%
+\contentsline {paragraph}{Critical Behaviors in Contagion Dynamics}{29}{paragraph*.20}%
+\contentsline {chapter}{\numberline {10}Ideas}{31}{chapter.10}%
+\contentsline {section}{\numberline {10.1}疾病传播下的Allee Threshold}{31}{section.10.1}%
+\contentsline {section}{\numberline {10.2}城市流量预测：Markov Chain和电网}{31}{section.10.2}%
+\contentsline {chapter}{\numberline {11}写作总结}{33}{chapter.11}%
+\contentsline {section}{\numberline {11.1}摘要与引言}{33}{section.11.1}%
+\contentsline {paragraph}{5/27/2020}{33}{paragraph*.21}%
