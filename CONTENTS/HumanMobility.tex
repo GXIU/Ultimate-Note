@@ -40,3 +40,42 @@ T_{i j}=\frac{m_{i}^{\alpha} n_{j}^{\beta}}{f\left(r_{i j}\right)}
     {Q}_{ij}={\int }_{0}^{\infty }{\Pr }_{{m}_{i}+\alpha \cdot {s}_{ij}}(z){\Pr }_{\beta \cdot {s}_{ij}}( < z){\Pr }_{{m}_{j}}( > z)dz,
 \end{equation}
 
+\section{有意思的工作}
+
+这个工作可以作为Allee工作的基础。
+
+\begin{itemize}
+    \item 数据源：2006年48个加拿大城市通勤普查数据，总共7 225 810人。每个城市的数据按照 census tract 组织，记录了每对职住地的人口数为$T_{ij}$. 每个 CT 约有2500-8000人居住，一般是一个城市的数个街区的大小。
+\end{itemize}
+
+CT 边界与有多少人选该CT作为工作地没有关系。记$n_{ij} = \sum_j T_{ij}$, $m_{ij} = \sum_i T_{ij}$. 将$m_j$看作随机变量，统计特征$\bar{m}$, $\sigma_m$。$W$是总工人数，$N$是城市总人口。Lloyd的平均聚集统计量：$m^* = \bar{m} + \sigma^2_m/\bar{m} - 1$ 从工作地的角度度量了工人的密度，是与随机选一个工人在同一个地方工作的工人的期望数。
+
+\textbf{为了刻画城市间的人类移动性差异}，作者动用了辐射模型。模型中，$\langle T_{ij} \rangle = p_{ij} n_{i}$其中$p_{ij}$是人取自$ij$流的概率，$n_{i}$是家处人口。利用~\cite{PhysRevE.66.016128}重的配置模型来采样。
+
+Our model makes two assumptions: first, we assume that the spatial trajectories of humans in cities can be predicted by their home and workplace locations, which is supported by recent analyses of high-resolution data on the relocation patterns of mobile phone users [13]; second, we assume that excursions from an individual's bed or work station are governed by a stochastic process that is identically distributed across cities. 
+
+为了实现模型，
+\begin{enumerate}
+    \item 先利用通勤数据来估计两地的交互频率。
+    \item 将频率翻译成逐对的传播概率 $\lambda: $ the strain-specific ratio between within-hostpathogen load and transmission hazard 
+\end{enumerate}
+
+\vspace{1cm}
+
+通勤模式分析：通勤矩阵$T_ij$的结构在城市内部和城市之间都发生了显着变化。这些可视化中的显着特征是某些城市出现了\textbf{星形}。星形形状出现在源自许多不同CT的通勤流被导向单个集中工作位置的地方。拥挤统计量$m^*$可以用来衡量城市中星型通勤模式的发生率，因为它的价值随着各个工作地点的聚集程度而增加。\begin{figure}
+    \centering
+    \includegraphics[width = 0.8\linewidth]{Pics/rspb20130763f01.jpg}
+    \caption{城市工人的流动方式。边缘的厚度和颜色显示了CT之间上下班的人数。圆圈实际上是短边，代表生活在同一CT中的个人。较大的城市通勤模式往往井井有条，这是通过将工作站与随机选择的工人位于同一CT上的工人的平均人数来衡量的（$m^*$）。但是，城市也显示出明显的组织差异，与人口规模无关。}
+\end{figure}
+随着总人口$N$增加，平均通勤人数$\bar{m}$很快就会饱和。相反的，$m^*$则会显示出与$N$的强烈正相关。说明大城市里的工人更倾向于前往几个巨型的工作地进行工作，但是平均每个CT中的工作地数量跟小城市差不多。所以，星形程度与在CT中工作的平均人数只是弱相关，但是与总人口关系很大。所以大城市在城市中心集中组织的程度更高。
+
+城市还表现出明显的与大小无关的$m^*$变化，这在$m^*$随函数N回归所预测的值之比中很明显（参见电子补充材料，表S2）。在我们分析的48个城市中，$m^*/\bar{m}$（以下称为“流动性模式中的过度异质性”）介于0.43至3.07之间，相差7.14倍。对于随机选择的两个城市，的较大值和较小值之间的平均比率$m^*/\bar{m}$是1.55。在移动性模式这个尺寸无关的差相当于所预测的大小依赖性差异（基于图~\ref{rspb20130763f02} 一个），这将导致从人口尺寸的2.64倍的变化。因此，与人口规模无关的差异是城市之间工人流动模式差异的重要组成部分。
+\begin{figure}
+    \centering
+    \includegraphics[width = 0.8\linewidth]{Pics/rspb20130763f02.jpg}
+    \caption{Variance explained in each city by the configuration (squares) and radiation (diamonds) models of commuting flows.}
+    \label{rspb20130763f02}
+\end{figure}
+配置模型解释了小城市通勤流量的大部分变化，但是随着N的增加，其性能会系统地下降，这表明大城市的交通方式组织化程度越来越高（图2b）。引力模型的拟合度比配置模型的拟合度差，但与大城市相比，它表现出与较小的城市更好拟合的相同趋势（请参阅电子补充材料）。辐射模型还显示出性能的系统变化：随着配置模型的适合度下降，辐射模型的性能增加，在小城市中表现相对较差，而在大城市中则更好（图2b）。
+
+$m^*$更大代表更有条理。
